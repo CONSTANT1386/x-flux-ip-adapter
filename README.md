@@ -47,3 +47,7 @@ Two kinds of dataet is allowed
   tpu_use_sudo: false
   use_cpu: false
   ```
+## inference script
+```bash
+python main.py --config x-flux/IPAdapter_inference.yaml 
+```
