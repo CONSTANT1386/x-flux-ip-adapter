@@ -1,5 +1,5 @@
 # x-flux-ip-adapter
-The IP-Adapter training scripts and inference for Flux Model, which is implemented based on X-Lab.
+The IP-Adapter training scripts and inference for Flux Model, which is implemented based on [X-Lab](https://github.com/XLabs-AI/x-flux).
 - Here we provide two method to repeat the training, i.e. `run.py` or `run.sh`
 - The training configuration is in `train_configs` folder
 - Provide a example inference configuration as `IPAdapter_inference.yaml`
