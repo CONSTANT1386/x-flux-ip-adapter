@@ -1,0 +1,36 @@
+model_name: "flux-dev"
+use_wds: false
+train_dataloader_len: 30000
+local_config:
+  json_file: /root/x-flux/combined_prompts.json
+  size: 512
+  image_root_path: /root/x-flux/dataset
+  train_batch_size: 4
+  num_workers: 4
+wds_config:
+  train_batch_size: 4
+  num_workers: 4
+  img_size: 512
+  wds_path: /root/laion/laion-sythetic-output/*.tar
+report_to: wandb
+train_batch_size: 4
+output_dir: /root/autodl-tmp/ip-adapter/
+max_train_steps: 100000
+learning_rate: 1e-5
+lr_scheduler: constant
+lr_warmup_steps: 10
+adam_beta1: 0.9
+adam_beta2: 0.999
+adam_weight_decay: 0.01
+adam_epsilon: 1e-8
+max_grad_norm: 1.0
+logging_dir: logs
+mixed_precision: "bf16"
+checkpointing_steps: 500
+checkpoints_total_limit: 14
+tracker_project_name: flux_ip_adapter_test
+resume_from_checkpoint: latest
+gradient_accumulation_steps: 2
+single_blocks: null
+double_blocks: null
+disable_sampling: true
